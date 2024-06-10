@@ -11,6 +11,7 @@ export class AuthService {
             .setEndpoint(conf.appwriteUrl) // Your API Endpoint
             .setProject(conf.appwriteProjectId);//Project Id
         this.account = new Account(this.client);
+        // console.log(this.account);
    
     }
 

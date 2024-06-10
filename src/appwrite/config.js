@@ -16,9 +16,10 @@ export class Service{
 
     }
 
-    async createPost({title,slug,content,featuredImage,status,userId}){
+    async createPost({title, slug, content, featuredImage, status, userId}){
         try {
-          return  await this.databases.createDocument(
+            console.log(conf.appwriteDatabaseId);
+            return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
@@ -31,7 +32,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            console.log("Appwrte server :: createPost :: error",error)
+            console.log("Appwrite serive :: createPost :: error", error);
         }
     }
 
